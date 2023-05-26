@@ -1,0 +1,1462 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* LODER CSS */
+
+.d1,
+.d2,
+.d3 {
+    text-shadow: 1px 1px 5px black;
+    color: aqua;
+    position: relative;
+    left: 700px;
+    bottom: 99px;
+}
+
+.d1 {
+    animation: dotimg 1.3s linear infinite;
+}
+
+.d2 {
+    animation: dotimg1 1.3s linear infinite;
+}
+
+.d3 {
+    animation: dotimg2 1.3s linear infinite;
+}
+
+.maindot {
+    position: absolute;
+    top: 0px;
+    display: flex;
+    width: 100%;
+    height: 1000px;
+    /* justify-content: center; */
+    align-items: center;
+    z-index: 999;
+    background-color: #000;
+    /* border: 1px solid black; */
+}
+
+@keyframes dotimg {
+    0% {
+        transform: scale(1.1);
+        margin: 10px;
+    }
+
+    50% {
+        transform: scale(1.5);
+
+    }
+
+    100% {
+        margin: 10px;
+        transform: scale(0);
+    }
+}
+
+@keyframes dotimg1 {
+    0% {
+        transform: scale(1.1);
+        margin: 10px;
+    }
+
+    50% {
+        transform: scale(0);
+
+    }
+
+    100% {
+        margin: 10px;
+        transform: scale(1.5);
+    }
+}
+
+
+
+@keyframes dotimg2 {
+    0% {
+        margin: 10px;
+
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    70% {
+        transform: scale(0);
+    }
+
+    100% {
+        margin: 10px;
+
+        transform: scale(1.3);
+    }
+}
+
+
+/* CSS FOR TOP NAVBAR */
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.152);
+    height: 78px;
+    position: fixed;
+    top: 0;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    z-index: 51;
+
+}
+
+.top-nav .email {
+    position: relative;
+    left: 50PX;
+    top: 20px;
+    font-family: 'Yeseva One', cursive;
+    font-weight: normal;
+
+}
+
+.top-nav h3 a {
+    text-decoration: none;
+    color: black;
+}
+
+.top-nav .email .fa-solid {
+    color: #3da89d;
+    position: absolute;
+    left: -35px;
+    top: 5px;
+    font-size: 26px;
+}
+
+.top-nav .email #top-nav-emailnow {
+    color: #3da89d;
+    font-size: 14px;
+    font-weight: -100px;
+
+}
+
+.top-nav .social-icon {
+    margin: 20px 80px;
+    display: flex;
+    align-items: center;
+}
+
+.top-nav .social-icon a {
+    color: #000;
+}
+
+.top-nav .social-icon a:hover {
+    color: #3da89d;
+    transition: all .3s ease;
+}
+
+.top-nav .social-icon .fa-brands {
+    margin-right: 35px;
+    font-size: 27px;
+}
+
+.top-nav .social-icon .fa-brands:hover {
+    text-shadow: 0px 0px 8px #393737b1;
+    transform: scale(1.3);
+    transition: all .3s ease;
+
+}
+
+/* CSS FOR BOTTOM NAVBAR */
+
+
+.bottom-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.142);
+    height: 90px;
+    position: fixed;
+    top: 78px;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    z-index: 51;
+
+}
+
+
+/* LIST STYLE  */
+
+
+.bottom-nav li {
+    display: inline-flex;
+    align-items: center;
+    list-style: none;
+    margin-left: 10px;
+    padding: 20px;
+    cursor: pointer;
+
+}
+
+.bottom-nav li a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 10px;
+    font-size: 20px;
+    font-family: 'Jost', sans-serif;
+    transition: all .4s ease;
+}
+
+.bottom-nav li a .fa-solid {
+    position: relative;
+    font-size: 7px;
+    color: #3da89d;
+    top: 15px;
+    right: 29px;
+    visibility: hidden;
+    justify-content: center;
+}
+
+.bottom-nav li a #home-icon {
+    position: relative;
+    left: 0;
+    top: 0;
+    font-size: 16px;
+    visibility: visible;
+    transition: all .4s ease-in;
+
+}
+
+.bottom-nav li a:hover #home-icon {
+    transform: rotatez(.5turn);
+}
+
+.bottom-nav li:nth-of-type(5) a .fa-solid {
+    position: relative;
+    top: 15px;
+    right: 20px;
+}
+
+.bottom-nav li:nth-of-type(1) a {
+    border-bottom: 1px solid #3da89d;
+    color: #3da89d;
+}
+
+.bottom-nav li:nth-of-type(1) a:hover {
+    border: none;
+}
+
+.bottom-nav li:nth-of-type(2) a .fa-solid {
+    position: relative;
+    top: 15px;
+    right: 40px;
+}
+
+.bottom-nav li a:hover .fa-solid {
+    visibility: visible;
+}
+
+.bottom-nav li a:hover {
+    /* border-radius: 5%; */
+    color: #3da89d;
+}
+
+
+/* DROPDOWN CONTENT CSS */
+
+
+.dropdown-content {
+    display: none;
+    box-shadow: 1px 1px 10px black;
+    visibility: hidden;
+}
+
+.bottom-nav ul li:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+    position: absolute;
+    top: 88px;
+    margin-right: 40px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0); 
+    opacity: 1;
+}
+
+.dropdown-content ul li:nth-of-type(1) {
+    color: #3da89d;
+    border-bottom: 1px solid #3da89d;
+}
+
+.bottom-nav ul li:nth-of-type(4) .dropdown-content ul li:nth-of-type(1) {
+    color: #3da89d;
+    border: none;
+}
+
+.dropdown-content ul li {
+    margin: 0;
+    width: 220px;
+    padding: 15px 20px;
+    text-align: left;
+    font-size: 20px;
+    font-family: 'Jost', sans-serif;
+    display: block;
+}
+
+.dropdown-content ul li:hover {
+    color: #3da89d;
+    transform-origin: left;
+    transition: all .1s linear;
+    box-shadow: 1px 1px 5px black;
+    font-weight: bold;
+    transform: scaley(1.01);
+    border-bottom: 1px solid #3da89d;
+
+}
+
+.bottom-nav .contect-section1 #bottom-nav-call-now {
+    color: #3da89d;
+    font-size: 14px;
+}
+
+.contect-section1 {
+    position: relative;
+    left: 70px;
+    bottom: 13px;
+    font-family: 'Yeseva One', cursive;
+    font-weight: normal;
+
+}
+
+.bottom-nav .bookamrk-icon {
+    color: #3da89d;
+    font-size: 25px;
+    cursor: pointer;
+    scroll-behavior: smooth;
+}
+
+.bottom-nav .bookamrk-icon:hover {
+    color: black;
+    transition: all .3s ease-in;
+    text-shadow: 5px 5px 1px gray;
+    background-color: transparent;
+    transform: scale(1.1);
+}
+
+.bottom-nav .contect-section1 .fa-solid {
+    color: #3da89d;
+    position: relative;
+    top: 35px;
+    right: 35px;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* BOTTOM NAVBAR BOOK NOW BUTTON */
+
+.bottom-nav .booknow-btn #bottom-booknow-btn {
+    padding: 12px 41px;
+    position: relative;
+    right: 70px;
+    font-size: 22px;
+    border: none;
+    background-color: #3da89d;
+    color: white;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .45s ease-in-out;
+}
+
+.bottom-nav .booknow-btn #bottom-booknow-btn:hover {
+    background-color: #000;
+    transform: scale(0.9);
+    transition: all .45s ease-in-out;
+    box-shadow: 0 0 7px rgb(0, 0, 0);
+
+}
+
+/* CSS FOR NAVBAR LOGO */
+
+
+.navlogo #main-logo {
+    position: absolute;
+    left: 680px;
+    top: 8px;
+    background-color: #ffffff;
+    cursor: pointer;
+    z-index: 53;
+    position: fixed;
+}
+
+.navlogo #logo-sideimg-1 {
+    position: absolute;
+    left: 819px;
+    top: 48px;
+    background-color: #ffffff;
+    z-index: 52;
+    position: fixed;
+}
+
+.navlogo #logo-sideimg-2 {
+    position: absolute;
+    left: 637px;
+    top: 47px;
+    background-color: #ffffff;
+    z-index: 52;
+    position: fixed;
+}
+
+/* CSS FOR VIDEO BANNER */
+
+#video-banner-1-content {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    color: white;
+    top: 700px;
+    width: 100%;
+}
+
+#video-banner-1-content .content {
+    font-size: 20px;
+    font-family: 'Yeseva One', cursive;
+    padding: 0px 100px;
+    margin-top: -180px;
+    font-weight: normal;
+}
+
+#video-banner-1-content .content h1 {
+    font-size: 72px;
+}
+
+#video-banner-1-content #video-banner-1-content-mouseimg {
+    margin-right: 180px;
+}
+
+#video-banner-1-content #video-banner-1-content-mouseimg img {
+    scroll-behavior: smooth;
+}
+
+/* CSS FOR ABOUT CONTENT  */
+
+.about-content {
+    display: flex;
+    background: url(../IMAGE/about-bg.png) no-repeat content-box white;
+    width: 100%;
+    height: 1170px;
+}
+
+.about-content .paragraph-content {
+    padding: 200px 50px;
+    font-family: 'Yeseva One', cursive;
+    width: 50%;
+    font-weight: normal;
+}
+
+.about-content .paragraph-content #paragraph-content-first-h2 {
+    font-family: 'Island Moments', cursive;
+    color: #3da89d;
+    font-size: 45px;
+    font-weight: 500;
+}
+
+.about-content .paragraph-content h1 {
+    font-size: 55px;
+
+}
+
+.about-content .paragraph-content p {
+    color: gray;
+    font-size: 20px;
+    text-align: justify;
+    font-family: 'Jost', sans-serif;
+}
+
+.about-content .paragraph-content #about-manager {
+    display: flex;
+    margin: 40px 0px;
+
+}
+
+.about-content .paragraph-content #about-manager .manger-content {
+    margin: 0px 10px;
+}
+
+.about-content .paragraph-content #about-manager h2 {
+    font-size: 20px;
+    color: #3da89d;
+    font-family: 'Yeseva One', cursive;
+    padding-bottom: 12px;
+    font-weight: normal;
+}
+
+/*  CSS FOR ABOUT SIDE IMAGE OF HOTEL PIC */
+
+.about-content .about-sidehotel-pic {
+    padding: 200px 50px;
+    z-index: 1;
+}
+
+.about-content .about-sidehotel-pic::before {
+    content: url(../IMAGE/home-about-img-bg.png);
+    position: absolute;
+    z-index: -1;
+
+}
+
+.about-content .about-sidehotel-pic::after {
+    content: url(../IMAGE/home-about-img-bg.png);
+    position: relative;
+    left: 420px;
+    bottom: 350px;
+    z-index: -1;
+
+}
+
+/* CSS FOR HOTEL IMAGE UPOUN REVIEWS BOX */
+
+.about-content .about-sidehotel-pic #about-sideimg-review {
+    background-color: white;
+    border-radius: 15px;
+    position: relative;
+    bottom: 100px;
+    width: fit-content;
+    padding: 10px 35px;
+    border: 1px solid rgba(128, 128, 128, 0.486);
+
+}
+
+.about-content .about-sidehotel-pic #about-sideimg-review h1 {
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Yeseva One', cursive;
+    font-weight: normal;
+}
+
+
+.about-content .about-sidehotel-pic #about-sideimg-review .fa-solid {
+    color: #3da89d;
+    margin-right: 8px;
+    text-shadow: 1px 1px 2px black;
+}
+
+.about-content .about-sidehotel-pic #about-sideimg-review p {
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+    padding-top: 5px;
+    color: gray;
+
+}
+
+/* CSS FOR  GALLERY CONTENT */
+
+.all-gallery-box {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#heading h1 {
+    font-family: 'Yeseva One', cursive;
+    font-size: 50px;
+    font-weight: normal;
+}
+
+#heading h2 {
+    font-family: 'Island Moments', cursive;
+    font-size: 40px;
+    color: #3da89d;
+    font-weight: 500;
+
+}
+
+#heading {
+    text-align: center;
+}
+
+.gallery-box {
+    border: .5px solid black;
+    width: fit-content;
+    overflow: hidden;
+    height: 324px;
+    margin: 20px;
+}
+
+.gallery-box img {
+    transition: all .5s ease-in-out;
+}
+
+.gallery-box:hover img {
+    transform: scale(1.2);
+    transition-duration: .4s;
+    filter: grayscale(43%);
+    filter: brightness(50%);
+
+}
+
+/* CSS FOR GALLERY INTERNAL CONTENT */
+
+.gallery-box #gallery-box-internal-content {
+    text-align: justify;
+    width: 250px;
+    padding: 10px;
+    color: white;
+    position: relative;
+    bottom: 120px;
+    visibility: hidden;
+    transition: all .4s ease-in-out;
+}
+
+.gallery-box .gallery-imgs::after {
+    content: url(../IMAGE/home-about-img-bg.png);
+
+}
+
+.gallery-box:hover #gallery-box-internal-content {
+    visibility: visible;
+    position: relative;
+    bottom: 180px;
+}
+
+.gallery-box #gallery-box-internal-content h3 {
+    font-family: 'Yeseva One', cursive;
+    font-size: 30px;
+    width: 245px;
+    font-weight: normal;
+}
+
+.gallery-box #gallery-box-internal-content h3:hover {
+    color: aqua;
+    transition: all .5s ease;
+
+}
+
+.gallery-box #gallery-box-internal-content #gallery-box-350-content {
+    font-size: 23px;
+    font-family: 'Jost', sans-serif;
+    color: #ffffff;
+
+}
+
+.gallery-box #gallery-box-internal-content p .fa-solid {
+    margin: 9px;
+}
+
+.gallery-box #gallery-box-internal-content p:hover {
+    color: #3da89d;
+
+}
+
+/*  CSS FOR     GALLERY IMAGE BUTTON */
+
+.gallery-box .gallery-box-internalbtn {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-family: 'Island Moments', cursive;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 8px;
+    background-color: transparent;
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    font-weight: 500;
+
+}
+
+.gallery-box .gallery-box-internalbtn p {
+    transform: scale(0);
+    transition: all .5s ease-in-out;
+    transform-origin: center center;
+    position: relative;
+    bottom: 43px;
+    right: 10px;
+    text-align: center;
+
+}
+
+.gallery-box .gallery-box-internalbtn:hover p {
+    background-color: rgb(255, 255, 255);
+    transform: scale(1);
+    transform-origin: center;
+    text-align: center;
+    padding: 8px;
+    width: 150px;
+
+}
+
+
+/* CSS FOR ROOM & SUITES BUTTON */
+
+.room-suites-btn {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+
+.room-suites-btn button {
+    padding: 12px 31px;
+    font-size: 21px;
+    border: none;
+    background-color: #3da89d;
+    color: white;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .45s ease-in-out;
+    position: relative;
+    bottom: 20px;
+}
+
+.room-suites-btn button:hover {
+    background-color: #000;
+    transform: scale(0.9);
+    transition: all .45s ease-in-out;
+    box-shadow: 0 0 7px rgb(0, 0, 0);
+
+}
+
+
+/* CORE FACILITIES & FEATURE SECTION */
+
+.core-facilites-fetures {
+    overflow: hidden;
+    height: 104vh;
+}
+
+.core-facilites-fetures::after {
+    content: '';
+    /* background-color: rgb(241, 234, 234); */
+    background-color: rgb(213, 148, 8);
+    background-image: url(../IMAGE/core\ facilites\ icon\ bg.png);
+    height: 100%;
+    width: 99.9%;
+    position: absolute;
+    top: 406vh;
+    background-repeat: repeat-y;
+    opacity: .06;
+    background-size: cover;
+    z-index: -1;
+}
+
+/* CSS FOR HEADING OF CORE FACILITES */
+
+#heading-for-core-facilites h3 {
+    color: #3da89d;
+    font-family: 'Island Moments', cursive;
+    font-size: 48px;
+    font-weight: 500;
+
+}
+
+#heading-for-core-facilites h1 {
+    font-family: 'Yeseva One', cursive;
+    font-size: 55px;
+    font-weight: normal;
+
+}
+
+#heading-for-core-facilites {
+    padding: 40px;
+}
+
+
+/* ICON SECTION */
+
+#icon-section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+.icon-first:nth-of-type(1) {
+    color: black;
+    position: relative;
+    text-align: center;
+    background-color: #000;
+    color: white;
+    font-size: 21px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    margin: 20px;
+    border-radius: 2%;
+    box-shadow: 1px 1px 5px black;
+}
+
+.icon-first:nth-of-type(6) {
+    position: relative;
+}
+
+.icon-first {
+    color: black;
+    position: relative;
+    text-align: center;
+    font-size: 16px;
+    width: 140px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    margin: 20px;
+    border-radius: 2%;
+    transition: all .3s ease-in-out;
+    background-color: rgb(244, 236, 236);
+}
+
+.icon-first:hover {
+    transition: all .3s ease-in-out;
+    box-shadow: 1px 1px 5px black;
+
+}
+
+.icon-first:hover .fa-solid {
+    color: #3da89d;
+    text-shadow: 1px 1px 2px black;
+
+}
+
+.icon-first .fa-solid {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.icon-first .fa-solid::after {
+    content: url(../IMAGE/f-icon-bg..png);
+    position: absolute;
+    top: 18px;
+    right: 42px;
+}
+
+/* CSS FOR SLIDER IMAGE */
+
+.all-image-slider {
+    width: 50%;
+    overflow: hidden;
+    position: relative;
+    bottom: 500px;
+    left: 750px;
+    display: flex;
+    background-image: url(../IMAGE/restaurant-iamge-1.png);
+    height: 500px;
+    border-radius: 25px;
+    animation: sliderimg 5s infinite linear;
+    ;
+    background-size: 100% 100%;
+    transition: all .5s ease;
+    border: 3px solid black;
+}
+
+.all-image-slider:hover {
+    transform: scale(1.01);
+    animation-play-state: paused;
+    filter: brightness(50%);
+    box-shadow: 8px 7px 5px rgb(189, 182, 182);
+
+}
+
+@keyframes sliderimg {
+    0% {
+        background-image: url(../IMAGE/restaurant-iamge-1.png);
+    }
+
+    75% {
+        background-image: url(../IMAGE/restaurant\ -image-2.png);
+    }
+
+    100% {
+        background-image: url(../IMAGE/restaurant\ -image-3.png);
+    }
+
+}
+
+
+/* CSS FOR REVEIW SECTION  */
+
+/* MAIN DIV OF REVIEW SECTION */
+
+#review-section-userreviews {
+    display: flex;
+
+}
+
+#review-section-userreviews:hover {
+    animation-play-state: paused;
+}
+
+
+.review-section {
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    top: 150px;
+
+}
+
+.review-section #review-section-header {
+    text-align: center;
+}
+
+.review-section #review-section-header h2 {
+    color: #3da89d;
+    font-family: 'Island Moments', cursive;
+    font-size: 42px;
+    font-weight: 500;
+}
+
+.review-section #review-section-header h1 {
+    font-family: 'Yeseva One', cursive;
+    font-size: 49px;
+    font-weight: normal;
+}
+
+.review-users-profile {
+    display: flex;
+    margin-top: 50px;
+}
+
+.review-users {
+    margin: 20px;
+    min-width: 700px;
+    border: 1px solid rgba(128, 128, 128, 0.53);
+    font-size: 22px;
+    padding: 10px 30px;
+    transition: all .5s ease;
+    animation: scroll 100s linear infinite;
+}
+
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-700px*3));
+    }
+}
+
+
+.review-users:hover {
+    border: 1px solid #3da89d;
+    box-shadow: 1px 1px 5px black;
+    background-color: #fff;
+    z-index: 1;
+    border: 2px;
+}
+
+.review-users.fa-solid {
+    transition: all .5s ease;
+    transform: scale(1);
+}
+
+.review-users:hover .fa-solid {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.644);
+    color: rgb(238, 176, 19);
+    transform: scale(1.1);
+    padding-right: 10px;
+    transition: all .5s ease;
+
+}
+
+
+.review-users-first-paragraph {
+    color: gray;
+    font-family: 'Jost', sans-serif;
+    font-weight: 10;
+    text-align: justify;
+}
+
+.review-user-name {
+    position: relative;
+    top: 10px;
+    left: 15px;
+}
+
+.review-user-name h3 {
+    font-family: 'Yeseva One', cursive;
+    font-weight: 1;
+    font-size: 21px;
+}
+
+.review-user-name .review-user-name-guest {
+    color: gray;
+    font-family: 'Jost', sans-serif;
+
+}
+
+.review-section-user-name-star-icon {
+    position: relative;
+    bottom: 40px;
+    left: 350px;
+    color: #3da89d;
+    font-size: 19px;
+}
+
+.review-users .double-colon-icon {
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    bottom: 20px;
+    right: 35px;
+}
+
+
+/* CSS FOR BLOG SECTION */
+
+.blog-section-main-div {
+    height: 80vh;
+    position: relative;
+    top: 250px;
+}
+
+.blog-section-iamges {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+#blog-section-header {
+    text-align: center;
+}
+
+#blog-section-header h2 {
+    color: #3da89d;
+    font-family: 'Island Moments', cursive;
+    font-size: 42px;
+    font-weight: 500;
+    /* text-shadow: 1px 1px 5px black; */
+}
+
+#blog-section-header h1 {
+    font-family: 'Yeseva One', cursive;
+    font-size: 49px;
+    font-weight: normal;
+    /* text-shadow: 1px 1px 5px black; */
+
+}
+
+/* CSS FOR BLOG IMAGES CONTENT */
+
+.blog-img-content {
+    position: relative;
+    width: 400px;
+    top: 80px;
+    left: 100px;
+    width: 400px;
+    height: 480px;
+    background-color: #aae0da29;
+    margin: 20px;
+}
+
+.blog-3-images {
+    height: 270px;
+    width: 400px;
+    overflow: hidden;
+}
+
+.blog-3-images img:hover {
+    transform: scale(1.1);
+    transition: all .6s ease-in-out;
+    filter: brightness(60%);
+}
+
+.blog-3-images img {
+    transition: all .6s ease-in-out;
+
+}
+
+.blog-img-date {
+    background-color: black;
+    color: white;
+    width: 120px;
+    padding: 8px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+
+/* CSS FOR BLOG PARRGRAPH SECTION */
+
+.blog-bottom-content {
+    position: relative;
+    top: 30PX;
+    padding: 0 20px;
+}
+
+.blog-bottom-content P {
+    color: gray;
+    font-family: 'Jost', sans-serif;
+    font-size: 18px;
+    margin-bottom: 18px;
+    transition: all .3s ease-out;
+
+}
+
+.blog-bottom-content h2 {
+    font-family: 'Yeseva One', cursive;
+    font-weight: normal;
+    transition: all .3s ease-out;
+
+}
+
+.blog-bottom-content h2:hover,
+.blog-bottom-content P:hover {
+    color: #3da89d;
+    cursor: pointer;
+}
+
+.blog-read-more-button {
+    position: relative;
+    top: 55px;
+}
+
+.icon-blog-read {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+
+.icon-blog-read p:hover,
+.icon-blog-read h6:hover {
+    color: black;
+    transition: all .5s ease;
+    cursor: pointer;
+
+}
+
+.icon-blog-read p {
+    color: #3da89d;
+    font-size: 18px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+    padding: 10px;
+}
+
+
+.icon-blog-read h6 {
+    color: #3da89d;
+    font-size: 39px;
+    font-weight: 1;
+}
+
+/* CSS FOR FOOTER */
+
+footer {
+    background-color: rgb(22, 21, 21);
+    height: 80vh;
+    position: relative;
+    top: 590px;
+    color: #fff;
+    display: flex;
+    overflow: hidden;
+}
+
+/* CSS FOR FOOTER FORM */
+
+#footer-form {
+    position: relative;
+    top: 60px;
+    left: 50px;
+    background-color: #4e51513b;
+    width: 300px;
+    height: 400px;
+    box-shadow: 1px 1px 8px black;
+    overflow: hidden;
+    z-index: 3;
+}
+
+#footer-form img {
+    position: relative;
+    bottom: 250px;
+    left: 80px;
+    opacity: 20%;
+    z-index: 2;
+}
+
+#footer-form input {
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    width: 200px;
+    margin: 15px;
+    font-family: 'Jost', sans-serif;
+    background-color: rgba(128, 128, 128, 0.405);
+    color: rgba(255, 255, 255, 0.958);
+    margin-left: 50px;
+    z-index: 1;
+}
+
+#footer-form textarea {
+    display: flex;
+    margin: 15px;
+    background-color: rgba(128, 128, 128, 0.405);
+    margin-left: 50px;
+    color: rgba(255, 255, 255, 0.958);
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.526);
+    border-radius: 5px;
+    padding: 8px;
+
+}
+
+#footer-form label {
+    font-size: 18px;
+    margin-left: 50px;
+    font-family: 'Yeseva One', cursive;
+    font-weight: 1;
+}
+
+#footer-form input::placeholder {
+    position: relative;
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.526);
+}
+
+#footer-form button {
+    position: relative;
+    padding: 5px;
+    font-size: 28px;
+    border-radius: 3px;
+    left: 100px;
+    font-family: 'Island Moments', cursive;
+    background-color: transparent;
+    color: #3da89d;
+    border: none;
+    text-decoration: solid;
+    font-weight: 500;
+    transition: all .5s ease-in-out;
+}
+
+
+#footer-form button:hover {
+    transform: scale(1.05);
+    box-shadow: 1px 1px 8px rgb(0, 0, 0);
+    color: #000;
+    cursor: pointer;
+    background-color: whitesmoke;
+    background-image: radial-gradient(circle 248px at center, #12494c26 0%, #adc4c942 47%, #1b334426 100%);
+}
+
+
+#footer-center-content-logo-socialicon {
+    border: 1px solid rgba(255, 255, 255, 0.263);
+    position: relative;
+    left: 310px;
+    top: 140px;
+    height: fit-content;
+    width: 300px;
+    height: 340px;
+    border-bottom-left-radius: 49%;
+    border-bottom-right-radius: 49%;
+}
+
+#footer-center-content-logo-socialicon p {
+    font-family: 'Jost', sans-serif;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.589);
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+#footer-center-content-logo-socialicon span {
+    width: 20px;
+    color: blue;
+}
+
+
+#footer-center-content-logo-socialicon img {
+    margin-top: 50px;
+    position: relative;
+    left: 90px;
+}
+
+.line1 {
+    border-bottom: 1px solid #3da89d;
+    width: 98px;
+    margin-right: 7px;
+}
+
+.line2 {
+    border-bottom: 1px solid #3da89d;
+    width: 98px;
+    margin-left: 5px;
+
+}
+
+.footer-center-bag-bottom-desighn {
+    display: flex;
+    justify-content: center;
+}
+
+.squre-icon-bag {
+    rotate: 45deg;
+    position: relative;
+    top: 8px;
+    color: #3da89d;
+}
+
+/* CSS FOR FOOTER SOCIAL ICON */
+
+.footer-social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foter-icons {
+    font-size: 25px;
+    margin: 15px 8px;
+    transition: all .5s ease-in-out;
+}
+
+.foter-icons:hover {
+    color: #3da89d;
+    text-shadow: 0 0 5px rgba(252, 252, 252, 0.277);
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+#dot1 {
+    background-color: rgba(128, 128, 128, 0.786);
+    border: 1px solid #3da89d;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    position: absolute;
+    top: -10px;
+    left: 50px;
+}
+
+#dot2 {
+    background-color: rgba(128, 128, 128, 0.745);
+    border: 1px solid #3da89d;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    position: absolute;
+    top: -10px;
+    right: 50px;
+}
+
+.triangle {
+    position: absolute;
+    top: -145px;
+    left: 58px;
+    height: 145px;
+    border-inline-start: 5px dotted rgba(160, 180, 70, 0.536);
+    border-inline-end: 5px dotted rgba(70, 131, 180, 0.536);
+    width: 183px;
+}
+
+/* footer contact section  */
+
+.footer-contect-section {
+    position: relative;
+    left: 500px;
+    top: 80px;
+    /* border: 1px solid red; */
+}
+
+.footer-contect-section #header {
+    color: #3da89d;
+    font-size: 19px;
+
+}
+
+.footer-contect-section .fa-solid,
+.footer-contect-section .fa-regular {
+    color: #3da89d;
+    font-size: 25px;
+    margin-right: 12px;
+
+}
+
+.footer-contact-internal-content {
+    font-family: 'Jost', sans-serif;
+    color: gray;
+    display: flex;
+    align-items: center;
+}
+
+.footer-contact-internal-content {
+    padding: 15px;
+
+}
+
+.return-button .fa-solid {
+    font-size: 35px;
+}
+
+
+.return-button #reurn-circle {
+    position: fixed;
+    border-radius: 10%;
+    bottom: 100px;
+    right: 100px;
+    padding: 10px;
+    z-index: 1;
+    transition: all .3s linear;
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+/* 
+.return-button #reurn-circle:hover{
+    rotate: 180deg;
+} */
+
+#gototop .fa-arrow-down {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    opacity: 0.6;
+    z-index: 99;
+    font-size: 2rem;
+    border-radius: 10%;
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    padding: 10px;
+    transition: all .4s ease-in-out;
+
+}
+
+#gototop .fa-arrow-down:hover {
+    opacity: 1;
+    scale: 1.1;
+    rotate: 180deg;
+}
+
+/* copyright section */
+
+#footer-copyright {
+    position: relative;
+    top: 550px;
+    right: 750px;
+}
+
+#footer-copyright span {
+    color: #3da89d;
+    font-family: 'Island Moments', cursive;
+    font-size: 52px;
+    font-weight: 1;
+}
